@@ -13,7 +13,7 @@ namespace DijkstraTwoStackAlgorithm
     {
         static void Main(string[] args)
         {
-            var str = Console.ReadLine(); ;
+            var str = Console.ReadLine();
             Evaluate(str);
             Console.Read();
         }
@@ -25,8 +25,7 @@ namespace DijkstraTwoStackAlgorithm
 
             while (!string.IsNullOrWhiteSpace(str))
             {
-                int value;
-                if (int.TryParse(str, out value))
+                if (int.TryParse(str, out int value))
                 {
                     Operands.Push(value);
                 }
@@ -62,6 +61,7 @@ namespace DijkstraTwoStackAlgorithm
                         Operators.Push(str);
                     }
                 }
+
                 str = Console.ReadLine();
             }
 
